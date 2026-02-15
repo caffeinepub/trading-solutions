@@ -1,0 +1,11 @@
+{
+  "frontend/src/internal/sensitive-audit-notes.ts": "Internal audit documentation confirming no sensitive information (bank details or \"93260\") was found in the codebase and listing verification steps completed.",
+  "frontend/src/utils/sanitizeSensitiveText.ts": "Utility functions to detect, sanitize, and validate text for sensitive information including bank details and the number \"93260\" as a preventive safety measure.",
+  "frontend/src/components/AppLayout.tsx": "Layout component with Trading Solutions branding, sticky header navigation including new links to Specialists and Pricing sections, and educational risk disclaimer in footer.",
+  "frontend/src/pages/ContentPage.tsx": "Main content page featuring hero section, educational disclaimer, features, new pricing section with three plans (Foundation ₹75k, Growth ₹125k, Loss Recovery Specialist ₹175k), new stock specialists section with expertise cards, and contact form with plan pre-fill functionality.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks file prepared for future backend integration, currently containing placeholder structure with no active queries.",
+  "frontend/src/App.tsx": "Root application component that composes AppLayout and ContentPage to render the complete, sanitized website.",
+  "frontend/src/index.css": "Global styles with OKLCH-based finance/trading aesthetic featuring smooth scroll behavior and scroll padding for anchor navigation.",
+  "frontend/tailwind.config.js": "Tailwind configuration with finance-themed design tokens including refined shadows and consistent border radius for a professional trading platform appearance",
+  "frontend/index.html": "HTML entry point with \"Trading Solutions\" title and favicon link to the generated trading solutions icon asset"
+}

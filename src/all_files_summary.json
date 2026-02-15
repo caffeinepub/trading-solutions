@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Defines an empty backend actor with no logic or data storage.",
+  "feature_evidence.json": "Contains feature evidence records mapping requested features to affected frontend files and components.",
+  "frontend-file-summaries.txt": "Lists short human-written summaries of key frontend source files for reference.",
+  "frontend/index.css": "Defines global theming variables and base styles using Tailwind for a finance‑themed UI.",
+  "frontend/index.html": "HTML entry point that loads the React app and sets basic metadata and favicon.",
+  "frontend/src/App.tsx": "Composes AppLayout and ContentPage to render the full application UI.",
+  "frontend/src/components/AppLayout.tsx": "Layout with header navigation, site branding, footer disclaimer, and wrapper for page content.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages an authenticated or anonymous backend actor using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements Internet Identity authentication context, login handling, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder hooks for future backend queries, currently returning actor state only.",
+  "frontend/src/index.css": "Global Tailwind-based design system with light/dark finance-oriented color tokens and typography rules.",
+  "frontend/src/internal/sensitive-audit-notes.ts": "Documents internal audit steps confirming no sensitive data exists and outlines sanitization measures.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query, Internet Identity provider, and global styles.",
+  "frontend/src/pages/ContentPage.tsx": "Main landing page component with hero, disclaimer, features, pricing plan selection behavior, and scrolling logic to contact section.",
+  "frontend/src/utils/sanitizeSensitiveText.ts": "Utility functions to detect, redact, and validate text for sensitive financial information or the specific number 93260.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending colors, shadows, typography, animations, and container settings for the frontend.",
+  "project_state.json": "JSON metadata describing project state, requested features, and current website requirements for Trading Solutions."
+}

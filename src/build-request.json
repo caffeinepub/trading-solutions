@@ -1,0 +1,89 @@
+{
+  "kind": "build_request",
+  "title": "Add pricing/purchase plans section and stock specialist content to Trading Solutions website",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Add a new Pricing/Purchase section to the landing page that displays three plans with the exact plan names and prices provided by the user: “Foundation plan ; 75k”, “Growth plan ; 125k”, and “Loss recovery Specialist ;175k”. The section must be visually consistent with existing shadcn Card styling and include a clear call-to-action button on each plan (e.g., “Purchase” / “Choose Plan”) that does not require real payment processing (it can scroll to the Contact section or open an on-page inquiry state).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "Foundation plan ; 75k   Growth plan ; 125k   Loss recovery Specialist ;175k    add this purchase section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new section exists in frontend/src/pages/ContentPage.tsx with a stable anchor id (e.g., id=\"pricing\") and contains exactly three plan cards.",
+        "Each plan card displays the exact plan name and price text as provided (including “k” and spacing/semicolons as shown, unless normalized for consistent typography while preserving the numbers and plan names).",
+        "Each plan card includes a CTA button that performs a non-payment action (e.g., scrolls to #contact or pre-fills a message), and no checkout/payment integration is added.",
+        "The section is responsive (single column on mobile, multi-column on desktop) and matches the site’s existing visual theme."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a “Stock Specialists” (or equivalent) section to the landing page with stock-specialist-related content (e.g., specialist capabilities, areas of expertise, and what users can expect). The content must be in English and must not promise guaranteed returns; it must remain aligned with the existing educational/disclaimer positioning.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "add some stock specialist things in website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new section exists in frontend/src/pages/ContentPage.tsx with a stable anchor id (e.g., id=\"specialists\").",
+        "The section includes specialist-focused content presented as cards or structured bullet points consistent with current UI components and styling.",
+        "No text in the new section guarantees returns or contradicts the existing disclaimer language."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Update the site header navigation to include links to the new sections (Pricing/Purchase and Stock Specialists) while keeping existing links (Home, About, Contact) functional.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-9"
+        ],
+        "quotes": [
+          "add this purchase sectionadd some stock specialist things in website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/src/components/AppLayout.tsx nav includes anchors to the new section ids (e.g., #pricing and #specialists).",
+        "Clicking the new nav links scrolls to the correct sections on the page.",
+        "Existing nav links still work as before."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not implement real payment processing or store payment/user purchase data in the backend.",
+    "Do not edit files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Keep all user-facing text in English.",
+    "Preserve the existing disclaimer content and ensure new content does not contradict it.",
+    "Backend must remain single-actor; only add backend logic if absolutely required by the UI changes (not expected for this request)."
+  ],
+  "nonGoals": [
+    "Integrating Stripe or any external payment provider.",
+    "Adding user accounts, order history, invoices, or downloadable products.",
+    "Adding real-time chat or messaging.",
+    "Guaranteeing trading returns or adding performance claims."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

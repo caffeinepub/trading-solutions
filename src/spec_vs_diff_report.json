@@ -1,0 +1,49 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T05:41:08.389Z",
+  "summary": "REQ-2 and REQ-3 appear implemented via new #specialists and #pricing sections/links, and REQ-1 is partially implemented (pricing section with CTA behavior), but the plan name/price strings may not match the exact required text formatting (semicolons/spacing/casing). Several unrequested utilities and styling/theme changes were also introduced.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Each plan card must display the exact plan name and price text as provided: “Foundation plan ; 75k”, “Growth plan ; 125k”, and “Loss recovery Specialist ;175k” (preserving plan names, numbers, and semicolon/spacing unless only typography-normalized).",
+      "reason": "The diff summary indicates the pricing cards show different text (e.g., currency symbol and different casing/wording) rather than the exact strings provided in the BuildRequest.",
+      "evidence": [
+        "frontend-file-summaries.txt (mentions: \"Foundation ₹75k, Growth ₹125k, Loss Recovery Specialist ₹175k\")",
+        "frontend/src/pages/ContentPage.tsx (pricing section mentioned in file summary; full card text not shown in truncated diff)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added sensitive-information sanitization and audit-note utilities unrelated to pricing/specialists sections.",
+      "reason": "Not requested by BuildRequest; introduces new internal audit notes and sanitization utilities.",
+      "evidence": [
+        "frontend-file-summaries.txt (frontend/src/internal/sensitive-audit-notes.ts, frontend/src/utils/sanitizeSensitiveText.ts)"
+      ]
+    },
+    {
+      "description": "Added placeholder React Query hooks for future backend integration.",
+      "reason": "BuildRequest does not ask for React Query setup or backend integration scaffolding.",
+      "evidence": [
+        "frontend-file-summaries.txt (frontend/src/hooks/useQueries.ts)"
+      ]
+    },
+    {
+      "description": "Global theme/styling changes (finance-themed design tokens, scroll behavior/padding adjustments, Tailwind config updates).",
+      "reason": "BuildRequest focuses on adding two landing-page sections and header links; broad theme/token changes were not requested.",
+      "evidence": [
+        "frontend/src/index.css",
+        "frontend-file-summaries.txt (tailwind.config.js described as updated)"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/AppLayout.tsx",
+    "frontend/src/index.css",
+    "frontend/src/pages/ContentPage.tsx",
+    "project_state.json"
+  ]
+}

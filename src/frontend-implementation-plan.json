@@ -1,0 +1,61 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Landing page: Pricing/Purchase plans + Stock Specialists sections with header navigation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a Pricing/Purchase section on the landing page with three plan cards (exact names/prices) using shadcn-style Cards and non-payment CTAs.",
+      "acceptanceCriteria": [
+        "A new section exists in frontend/src/pages/ContentPage.tsx with a stable anchor id (e.g., id=\"pricing\") and contains exactly three plan cards.",
+        "Each plan card displays the exact plan name and price text as provided (including “k” and spacing/semicolons as shown, unless normalized for consistent typography while preserving the numbers and plan names).",
+        "Each plan card includes a CTA button that performs a non-payment action (e.g., scrolls to #contact or pre-fills a message), and no checkout/payment integration is added.",
+        "The section is responsive (single column on mobile, multi-column on desktop) and matches the site’s existing visual theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContentPage.tsx",
+          "operation": "modify",
+          "description": "Implement a new <section id=\"pricing\"> on the landing page that renders exactly three plan cards with the user-provided text: “Foundation plan ; 75k”, “Growth plan ; 125k”, and “Loss recovery Specialist ;175k”. Use the shadcn-ui Card and Button components to match existing styling (Verify the component's usage instructions before implementing). Ensure responsive layout (e.g., single column on mobile, multi-column on desktop). Add a clear CTA button on each plan that performs a non-payment action only (e.g., scroll to #contact and optionally prefill the Contact message field with the selected plan), and do not add any payment/checkout integration."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a Stock Specialists section on the landing page with structured, English, non-promissory specialist-focused content consistent with existing disclaimer positioning.",
+      "acceptanceCriteria": [
+        "A new section exists in frontend/src/pages/ContentPage.tsx with a stable anchor id (e.g., id=\"specialists\").",
+        "The section includes specialist-focused content presented as cards or structured bullet points consistent with current UI components and styling.",
+        "No text in the new section guarantees returns or contradicts the existing disclaimer language."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContentPage.tsx",
+          "operation": "modify",
+          "description": "Add a new <section id=\"specialists\"> to the landing page containing English stock-specialist-related content (capabilities, areas of expertise, and what users can expect) presented in Cards and/or structured bullet lists consistent with the current design. Use shadcn-ui Card primitives for visual consistency (Verify the component's usage instructions before implementing). Ensure the content does not guarantee returns and remains aligned with the existing educational/disclaimer language."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Update header navigation to link to the new Pricing/Purchase and Stock Specialists sections while preserving existing Home/About/Contact behavior.",
+      "acceptanceCriteria": [
+        "frontend/src/components/AppLayout.tsx nav includes anchors to the new section ids (e.g., #pricing and #specialists).",
+        "Clicking the new nav links scrolls to the correct sections on the page.",
+        "Existing nav links still work as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AppLayout.tsx",
+          "operation": "modify",
+          "description": "Update the header <nav> to add links for the new sections (e.g., anchors to #pricing and #specialists) while keeping existing Home (#home), About (#about), and Contact (#contact) links intact and functional."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust global styling to improve anchor navigation UX (e.g., enable smooth scrolling and/or scroll offset behavior if needed) without changing the existing theme variables or disclaimer content."
+        }
+      ]
+    }
+  ]
+}

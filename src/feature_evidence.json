@@ -1,0 +1,60 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-new-pricing-purchase-section-to-the-landing-page-that-displays-three-plans-with-the-exact-plan-names-and-prices-provided-by-the-user-foundation-plan-75k-growth-plan-125k-and-loss-recovery-specialist-175k-the-section-must-be-visually-consistent-with-existing-shadcn-card-styling-and-include-a-clear-call-to-action-button-on-each-plan-e-g-purchase-choose-plan-that-does-not-require-real-payment-processing-it-can-scroll-to-the-contact-section-or-open-an-on-page-inquiry-state",
+      "featureTitle": "Add a new Pricing/Purchase section to the landing page that displays three plans with the exact plan names and prices provided by the user: “Foundation plan ; 75k”, “Growth plan ; 125k”, and “Loss recovery Specialist ;175k”. The section must be visually consistent with existing shadcn Card styling and include a clear call-to-action button on each plan (e.g., “Purchase” / “Choose Plan”) that does not require real payment processing (it can scroll to the Contact section or open an on-page inquiry state).",
+      "files": [
+        "frontend/src/pages/ContentPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-stock-specialists-or-equivalent-section-to-the-landing-page-with-stock-specialist-related-content-e-g-specialist-capabilities-areas-of-expertise-and-what-users-can-expect-the-content-must-be-in-english-and-must-not-promise-guaranteed-returns-it-must-remain-aligned-with-the-existing-educational-disclaimer-positioning",
+      "featureTitle": "Add a “Stock Specialists” (or equivalent) section to the landing page with stock-specialist-related content (e.g., specialist capabilities, areas of expertise, and what users can expect). The content must be in English and must not promise guaranteed returns; it must remain aligned with the existing educational/disclaimer positioning.",
+      "files": [
+        "frontend/src/pages/ContentPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-site-header-navigation-to-include-links-to-the-new-sections-pricing-purchase-and-stock-specialists-while-keeping-existing-links-home-about-contact-functional",
+      "featureTitle": "Update the site header navigation to include links to the new sections (Pricing/Purchase and Stock Specialists) while keeping existing links (Home, About, Contact) functional.",
+      "files": [
+        "frontend/src/components/AppLayout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
